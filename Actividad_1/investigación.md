@@ -47,3 +47,42 @@ Es una parte de la instrucción que indica a la CPU qué operación debe realiza
 
 
 
+Interación de los componentes
+
+La CPU 
+![La CPU](imagen_de_CPU.png)
+
+La CPU con ayuda del Pc manda a buscar una instrucción en una dirección.
+
+La ROM
+![La ROM](Images/imagen_de_ROM.png)
+Busca la dirección donde se encuentra esta instrucción y manda su contenido a los decodificadores.
+![decodificador](Images/circuito_que_decodifica.png)
+los decodificadores traducen la instrucción a lenguaje máquina para ser interpretado y por último ejecutado
+
+
+La memory
+![La memory](Images/imagen_de_memory.png)
+
+La memory tiene un circuito interno que hace posible que el teclado active la pantalla y modifique los pixeles para así volverlos negros al mantener sostenida cada tecla
+
+
+Conceptos de un programa
+
+1. ¿Qué es un programa y dónde se almacena?
+
+Un programa es un conjunto de instrucciones que le indica a un computador cómo realizar una tarea específica.
+
+Se almacena en un dispositivo de almacenamiento, como un disco durp estado sólido o en la memoria de un dispositivo, dependiendo de si está en ejecución o no.
+
+2. Si pongo un comentario en un programa como: //variable tipo contador. ¿Dónde se almacena dicho comentario?
+
+No se almacenan en ningún lado del programa ejecutable, solo en el disco duro o código funete.
+
+3. ¿Donde se almacena una variable?
+
+Se alamacena en la memoria RAM durante su ejecución del programa.
+
+Proceso FETCH-DECODE-EXECUTE
+
+Este proceso se basa en la busqueda de instrucciones, posteriormente se traduce al lenguaje que la máquina entiende y por último ejecuta esta instrucción
