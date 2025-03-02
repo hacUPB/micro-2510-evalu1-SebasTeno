@@ -86,3 +86,57 @@ Se alamacena en la memoria RAM durante su ejecución del programa.
 Proceso FETCH-DECODE-EXECUTE
 
 Este proceso se basa en la busqueda de instrucciones, posteriormente se traduce al lenguaje que la máquina entiende y por último ejecuta esta instrucción
+
+
+Resumen de los Tipos de Instrucciones del Procesador
+
+El procesador del caso de estudio maneja instrucciones de 16 bits, las cuales se dividen en dos tipos principales: instrucciones tipo A e instrucciones tipo C.
+
+Instrucciones Tipo A
+
+Las instrucciones tipo A tienen siempre el bit de mayor peso en 0. Su función principal es almacenar los 15 bits menos significativos de la instrucción en un registro interno de la CPU llamado REGISTRO A.
+
+Ejemplo de instrucción tipo A:
+
+Dada la instrucción en hexadecimal:
+
+0x4000
+
+Se covierte a binario:
+
+0100 0000 0000 0000
+
+Como el bit de mayor peso es 0, se trata de una instrucción tipo A. Esta instrucción almacena el valor 0x4000 en el REGISTRO A.
+
+Instrucciones Tipo C
+
+Las instrucciones tipo C tienen los tres bits de mayor peso siempre en 111. Estas instrucciones pueden realizar diversas operaciones en la CPU, tales como manipulaciones de registros, cálculos matemáticos y operaciones lógicas.
+
+Ejemplo de instrucción tipo C:
+
+Dada la instrucción en hexadecimal:
+
+0xEC10
+
+Convertimos a binario:
+
+1110 1100 0001 0000
+
+Como los tres bits de mayor peso son 111, es una instrucción tipo C.
+
+Resumen de los Campos de las Instrucciones Tipo C
+
+Bits de mayor peso (111): Identifican la instrucción como tipo C.
+
+Campo de operación (a c1 c2 c3 c4 c5 c6): Define qué operación ejecutará la CPU.
+
+Campo de destino (d1 d2 d3): Indica dónde se almacenará el resultado de la operación.
+
+Campo de salto (j1 j2 j3): Define si la CPU debe cambiar la dirección de ejecución según el resultado de la operación.
+
+Los registros tipo C sirve para implementar estructuras tales como if, while, for.
+
+EJERCICIO 9 
+
+Este código en lenguaje ensamblador Hack implementa un bucle que suma los números del 1 al 100 y almacena el resultado en la variable sum.
+
